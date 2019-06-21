@@ -16,7 +16,7 @@ using namespace std;
 		int fim;
 		char v[MAX];
 		
-		Fila();
+		Fila(); // construtor
 		int enfileirar (char chave);	
 		int desenfileirar ();	
 		void imprimeFila ();

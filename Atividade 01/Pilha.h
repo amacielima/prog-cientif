@@ -15,9 +15,9 @@ using namespace std;
 		char v[MAX];
 		int topo;	
 		
-		Pilha();
-		int empilhar (char chave);	
-		int desempilhar ();	
+		Pilha(); // construtor
+		int empilhar (char chave); // push	
+		int desempilhar ();	// pop
 		void imprimePilha ();
 		
 	};

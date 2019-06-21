@@ -1,14 +1,14 @@
-#include <iostream>
-#include "Pilha.h"
-#include "Fila.h"
-
 /*
 
 	Nome: Amanda Maciel de Lima
 	PEL216 - Programação Científica
-	Modificado em: 15-Jun-2019
+	Modificado em: 20-Jun-2019
 
 */
+
+#include <iostream>
+#include "Pilha.h"
+#include "Fila.h"
 
 	int main () {
 	

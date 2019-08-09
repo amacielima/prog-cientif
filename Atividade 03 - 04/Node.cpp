@@ -31,7 +31,7 @@
 			cout << v[s] << " ";	
 		}
 		
-		cout << "\tid " << id << endl;
+		cout << "\tid " << id  << "\t hamming: " << calcHamming()-1 << endl;
 		
 	}
 	
@@ -77,12 +77,9 @@
 		
 		for (int i = 0; i < SQUARES; i++)
 		{
-			if (i == 8)
+			if (i == 8 && v[i] != 0)
 			{
-				if (!(v[i] == 0))
-				{
-					h = h + 1;
-				}
+				h = h + 1;
 			}
 			
 			if (!(i+1 == v[i]))

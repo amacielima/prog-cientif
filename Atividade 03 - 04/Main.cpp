@@ -9,8 +9,8 @@ int main (int argc, char** argv)
 {
 	
 	//int array[SQUARES] = {1, 2, 3, 4, 5, 6, 7, 0, 8};   // estado inicial
-	//int array[SQUARES] = {0, 1, 3, 4, 2, 5, 7, 8, 6};   // estado inicial *
-	int array[SQUARES] = {1, 2, 3, 4, 0, 6, 7, 5, 8};   // estado inicial
+	int array[SQUARES] = {0, 1, 3, 4, 2, 5, 7, 8, 6};   // estado inicial *
+	//int array[SQUARES] = {1, 2, 3, 4, 0, 6, 7, 5, 8};   // estado inicial
 	
 	cout << "------------------------------------------------------------" << endl;
 	
@@ -28,22 +28,22 @@ int main (int argc, char** argv)
 	
 	cout << "------------------------------------------------------------" << endl;
 	
-	cout<< "\nBFS: ";
+	cout<< "\n\tBFS: ";
 	BFS b(g);
 	b.search();
 	b.q->print();
 	
-	cout<< "\nDFS: ";
+	cout<< "\n\tDFS: ";
 	DFS d(g);
 	d.initSearch();
 	d.q->print();
 		
-	cout<< "\nHillClimbing: ";
+	cout<< "\n\tHillClimbing: ";
 	HillClimbing h(g);
 	if(h.search())
 		h.q->print();
 	
-	cout<< "\nA*: ";
+	cout<< "\n\tA*: ";
 	AStar a(g);
 	a.search();
 	a.q->print();

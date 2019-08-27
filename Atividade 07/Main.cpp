@@ -72,7 +72,7 @@ using namespace std;
 		
 		// V da equacao do exercicio 1
 		int a = 0;
-		int b = 4;
+		int b = 1;
 		
 		vector <int> v; // vetor com numero de amostras para experimentos
 		v.push_back(10);
@@ -92,7 +92,7 @@ using namespace std;
 			
 			cout << "\t\tMonte Carlo = " << (b - a) * mc_ex1 << endl; // multiplica o volume da area o valor do somatorio divido pelas amostras
 				
-			cout << "\t\tErro = " << est_erro(mc_ex1, pow(mc_ex1, 2), v[i], (b - a)) << endl << endl; // aplica a formula para calcular o erro de aproximacao
+			cout << "\t\tErro = " << est_erro(mc_ex1, pow(mc_ex1, 2), v[i], (b - a)) << endl << endl; // aplica a formula para calcular o erro
 			
 		}
 		
@@ -111,7 +111,7 @@ using namespace std;
 			
 			cout << "\t\tMonte Carlo = " << V * mc_ex2 << endl; // multiplica o volume da area o valor do somatorio divido pelas amostras
 				
-			cout << "\t\tErro = " << est_erro(mc_ex2, pow(mc_ex2, 2), v[i], V) << endl << endl; // aplica a formula para calcular o erro de aproximacao
+			cout << "\t\tErro = " << est_erro(mc_ex2, pow(mc_ex2, 2), v[i], V) << endl << endl; // aplica a formula para calcular o erro
 			
 		}
 	

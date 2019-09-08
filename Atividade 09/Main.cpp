@@ -27,12 +27,12 @@ using namespace std;
 	{
 		double b = a; // copia do valor a para o segundo calculo
 		
-		double x = func_eq_a(a) / deriv_eq_a(a);
+		double x = func_eq_a(a) / deriv_eq_a(a); // funcao original / funcao derivada
 		
 		cout << "Taxa de Aprendizado: " << t << endl;
 		cout << "-----------------------------------------------------------" << endl;
 		
-		while (x >= t)
+		while (x >= t) // enquanto x nao for maior ou igual a taxa de aprendizado
 		{
 			x = func_eq_a(a) / deriv_eq_a(a);
 			a = a - x;
@@ -40,9 +40,9 @@ using namespace std;
 		
 		cout << "\tEquacao A" << "\n\tRaiz: " << a << endl;
 		
-		double y = func_eq_b(a) / deriv_eq_b(a);
+		double y = func_eq_b(a) / deriv_eq_b(a); // funcao original / funcao derivada
 		
-		while (y >= t)
+		while (y >= t) // enquanto x nao for maior ou igual a taxa de aprendizado
 		{
 			y = func_eq_b(a) / deriv_eq_b(a);
 			b = b - y;
@@ -63,17 +63,18 @@ using namespace std;
 		cout << ":::::::::::::::::::::: Newton-Raphson :::::::::::::::::::::" << endl;
 		cout << "-----------------------------------------------------------" << endl;
 		
-			
+		// paraleliza a execucao do for pelo OpenMP
 		#pragma omp parallel for
 		for (double i = 0.1; i <= 1.0; i = i + 0.1)
 		{
-			const clock_t ini = clock();
-			newtonRaphson(xo, i);	
+			const clock_t ini = clock(); // contabiliza o inicio da iteracao
 			
-			cout << "Tempo: " << float(clock () - ini) / CLOCKS_PER_SEC << endl;
+			newtonRaphson(xo, i);	// executa o metodo de Newton-Raphson
+			
+			cout << "Tempo: " << float(clock () - ini) / CLOCKS_PER_SEC << endl; // contabiliza o tempo de execucao da iteracao
 			cout << "-----------------------------------------------------------" << endl;
 					
-		}	
+		}
 
 		return 0;
 	}
